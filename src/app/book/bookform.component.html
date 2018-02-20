@@ -1,0 +1,8 @@
+<div (click)="ClickDiv()">
+
+    <button class="btn btn-primary" (click)="OnClickEvent($event)">click</button>  
+
+    <input type="text" [(ngModel)]="bookName" placeholder="type sth.." #hashBookName="ngModel" ngModel
+    name="txtBookName" id="idBookName" (keyup.enter)="OnKeyUpEvent(hashBookName)" />
+    {{bookName}}
+</div>

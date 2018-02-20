@@ -1,0 +1,12 @@
+<p>
+
+  <input type="text" [(ngModel)]="greeting.name" placeholder="type sth.." #hashgreetingName="ngModel" ngModel
+  name="txtgreetingName" id="idgreetingName" />
+  {{greeting.name}}
+  <br>
+  <br>
+  <button class="btn btn-primary" (click)="GetGreeting()">Get Greeting</button>  
+  <br>
+  <br>
+  <button class="btn btn-primary" (click)="CreateGreeting()">Submit</button>  
+</p>

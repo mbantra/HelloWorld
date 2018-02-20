@@ -1,0 +1,23 @@
+<form #createBookForm="ngForm" (ngSubmit)="SaveBook(createBookForm)">
+  <div class="col-sm">
+  <div class="form-group">
+    <label for="idBookName">Book Name</label>
+    <input #bookName="ngModel" [(ngModel)]="book.name" type="text" class="form-control" id="idBookName" name="txtBookName" required minlength="4">
+    <div class="alert alert-danger" *ngIf="bookName.touched && bookName.invalid && bookName.errors.required"> Title is required! </div>
+    <div class="alert alert-danger" *ngIf="bookName.touched && bookName.invalid && bookName.errors.minlength"> Min length is short! </div>
+  </div>
+  <div class="form-group">
+    <label for="idAuthorName">Author</label>
+    <input #authorName="ngModel" [(ngModel)]="book.author" type="text" class="form-control" id="idAuthorName" name="txtAuthorName">
+  </div>
+  <div class="form-group">
+    <label for="idDescription">Description</label>
+    <input #description="ngModel" [(ngModel)]="book.description" type="text" class="form-control" id="idDescription" name="txtDescription">
+  </div>
+  <div class="form-group">
+    <label for="idPrice">Price</label>
+    <input #price="ngModel" [(ngModel)]="book.price" type="number" class="form-control" id="idPrice" name="txtPrice">
+  </div>
+</div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
